@@ -222,7 +222,7 @@ ul {
   /* width: 100%; */
     /* reach 100% */
   height: 100vh; 
-  /* background: url('./img/sh.jpg') no-repeat center/cover; */
+  background: url('./img/sh.jpg') no-repeat center/cover;
     /* for the items inside */
   display: flex; 
     /*--for vertical text--*/
