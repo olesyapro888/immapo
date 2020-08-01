@@ -232,6 +232,75 @@ ul {
   }
 }
 
+/* Comment form */
+.com-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.com-container.show-comcont {
+  display: block;
+}
+
+.comment {
+  background-color: #fff;
+  border-radius: 5px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  align-items: center;
+  top: 60px;  
+  left: 0; 
+  /* transform: translate3d(70%,0,30%); */
+  max-width: 100%;
+  width: 300px; 
+  /* animation-name: comopen; 
+  animation-duration: var(--modal-duration); */
+  opacity: 0.9;
+}
+
+.com-header {
+  background: var(--primary-color);
+  color: #f4f4f4;
+  padding: 15px;
+}
+
+.com-header h3 {
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+
+.com-form div {
+  margin: 15px 0;
+}
+
+.com-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.com-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+
+@keyframes comopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+/* Showcase */
 .showcase{
   position: relative;
   height: 100vh; 
