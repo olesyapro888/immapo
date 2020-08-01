@@ -42,7 +42,7 @@ ul {
   justify-content: space-between;
   height: 60px;
   padding: 20px 0;
-  font-size: 13px;
+  font-size: 15px;
   z-index: 100;
   }
 
@@ -67,26 +67,14 @@ ul {
   margin-left: 20px;  
   }
 
-.main-nav h3{
-  animation-name: commentsignal;
-  animation-duration: var(--comment-duration);
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  }
-
-  @keyframes commentsignal {
-    from {
-      color: var(--primary-color);
-    }
-    to {
-      color: #25b03a;
-    }
-  }
-
 .main-nav ul li a:hover {
   border-bottom: 2px ridge #25b03a;
 }
-    
+
+.main-nav ul.right-menu {
+  margin:15px;
+  padding: 30px;
+}
 
 .menu-btn{
   cursor: pointer;
@@ -96,6 +84,7 @@ ul {
   /* stack of box */
   z-index: 2;
   display: none;
+  font-size: 15px;
   }
 
 .btn {
@@ -121,8 +110,32 @@ ul {
   padding: 5px 5px; 
   opacity: 0.8;
   background:none;
-  font-size: 12px;
+  font-size: 15px;
 }
+
+.com-btn{
+  cursor: pointer;
+  display: inline;
+  border: 0;
+  padding: 5px 5px; 
+  opacity: 0.8;
+  background:none;
+  font-size: 18px;
+  animation-name: comsignal;
+  animation-duration: var(--comment-duration);
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  }
+
+  @keyframes comsignal {
+    from {
+      color: var(--primary-color);
+    }
+    to {
+      color: #25b03a;
+    }
+  }
+
 
 .close-btn {
   background: transparent;
@@ -151,10 +164,11 @@ ul {
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
   position: relative;
-  top: 70;
-  left: 70;
-  right: 70;
-  bottom: 70;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 100;
 }
 
@@ -165,15 +179,16 @@ ul {
 
 .modal {
   background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  border-radius: 5px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: absolute;
-  /* overflow: hidden; */
-  top: 0; 
-  left: 0;
-  transform: translate(100%, 100%);
+  overflow: hidden;
+  align-items: center;
+  top: 60px;  
+  left: 0; 
+  transform: translate3d(70%,0,30%);
   max-width: 100%;
-  width: 400px; 
+  width: 300px; 
   animation-name: modalopen; 
   animation-duration: var(--modal-duration);
   opacity: 0.9;
