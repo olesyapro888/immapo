@@ -3,6 +3,7 @@
 
 :root{
   --modal-duration: 1s;
+  --comment-duration: 2s;
   --primary-color:#282D29;
 }
 
@@ -14,7 +15,7 @@
 
 body{
   font-family: 'Noto Sans JP', sans-serif;
-  background: #fff;
+  background:#fff;
   color: #000;
   font-size: 15px;
   line-height: 1.5;  
@@ -61,14 +62,31 @@ ul {
   padding-bottom: 2px;
   }
 
-.main-nav ul li a:hover {
-  border-bottom: 2px ridge #25b03a;
-  }
-  
 .main-nav ul.main-menu {
   flex: 1;
   margin-left: 20px;  
   }
+
+.main-nav h3{
+  animation-name: commentsignal;
+  animation-duration: var(--comment-duration);
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  }
+
+  @keyframes commentsignal {
+    from {
+      color: var(--primary-color);
+    }
+    to {
+      color: #25b03a;
+    }
+  }
+
+.main-nav ul li a:hover {
+  border-bottom: 2px ridge #25b03a;
+}
+    
 
 .menu-btn{
   cursor: pointer;
@@ -194,7 +212,6 @@ ul {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 0.9;
   }
@@ -204,7 +221,7 @@ ul {
   position: relative;
   height: 100vh; 
   display: flex; 
-    /*--for vertical text--*/
+  /*--for vertical text--*/
   flex-direction: column; 
   align-items: center;
   text-align: center;
