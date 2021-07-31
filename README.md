@@ -1,4 +1,4 @@
 # IMMAPO
+Learning communication in foreign languages by author's method!
 
-## Subtitle
-Section
+One page of the site is published at https://itekkie.github.io/immapo/
